@@ -1,11 +1,8 @@
-
-
 .cover{
   margin: 0 auto;
   padding: 0;
   width: 100vw;
   height: 100vh;
-
   background-image:url("/bgcaixa.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -28,6 +25,8 @@
   display: flex;
   flex-direction: column;
   justify-content:flex-end;
+  margin-top: 25px;
+  font-family:monospace;
 }
 
 .subcontainer2{
@@ -35,6 +34,8 @@
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
+  margin-top: 25px;
+  font-family:monospace;
 }
 
 .container11{
@@ -43,19 +44,21 @@
   display: flex;
   justify-content: space-between;
   margin: 21.7px;
+  font-family:monospace;
 }
 
 .btnestiliza1 {
   width: 70px;
   height: 50px;
+  font-family:monospace;
 }
 
 .btnestiliza{
   width: 300px;
   height: 50px;
   box-shadow: 10px 5px 5px black;
-
-
+  font-family:monospace;
+  font-size: 15pt;
 }
 
 .titulo{
@@ -64,7 +67,9 @@
   font-size: 25pt;
   text-align: center;
   margin-top: 15px;
+  font-family:monospace;
 }
+
 
 .subtitulo{
   width: 350px;
