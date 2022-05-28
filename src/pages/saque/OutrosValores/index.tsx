@@ -1,7 +1,7 @@
-import styles from  './Saque.module.css'
+import styles from  './OutrosValores.module.css'
 
 
-const Saque = () => {
+const OutrosValores = () => {
     return (
 
         <main>
@@ -22,7 +22,7 @@ const Saque = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizat}> Selecione entre os valores disponíveis:  </div>
+                    <div className={styles.btnestilizat}> Selecione o valor que deseja sacar:  </div>
                 </div>
 
                 <div className={styles.container11}>
@@ -58,19 +58,19 @@ const Saque = () => {
                     <div className={styles.btnestiliza1}></div>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>R$ 50,00</button>
+                    <input type="text" className={styles.btnestiliza}placeholder="Digite aqui:"></input>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>R$ 100,00</button>
+                    <div className={styles.btnestilizatt}>Deseja seguir com o saque?<br></br></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>R$ 200,00</button>
+                <span className={styles.subtitulo1}>Sim:</span><input type='radio'   name="OPCAO"className={styles.btnestiliza1}></input><span className={styles.subtitulo1}>Não:</span><input type='radio'  name="OPCAO" className={styles.btnestiliza1}></input>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>Outros Valores</button>
+                    <button className={styles.btnestiliza}>Sacar</button>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
@@ -95,4 +95,4 @@ const Saque = () => {
     )
 }
 
-export default Saque
+export default OutrosValores

@@ -78,7 +78,7 @@ const Home = () => {
                 <button className={styles.btnestiliza1}></button>  
             </div>
             <div className={styles.container11}>
-                <div className={styles.subtitulo}>0800 - 33599853</div>
+                <div className={styles.subtitulo}>tel: 0800 - 9999999</div>
                 <div className={styles.btnestiliza1}></div>   
             </div>
 

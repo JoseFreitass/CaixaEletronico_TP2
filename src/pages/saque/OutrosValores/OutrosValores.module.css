@@ -53,6 +53,20 @@
     height: 50px;
     font-family:monospace;
   }
+
+
+  .btnestilizacheck{
+    font-family:monospace;
+    width: 70px;
+    height: 50px;
+
+  }
+
+  .subtitulo1{
+      color: white;
+      font-size: 15pt;
+      width: 0px;
+  }
   
   .btnestiliza{
     width: 300px;
@@ -60,7 +74,16 @@
     box-shadow: 10px 5px 5px black;
     font-family:monospace;
     font-size: 15pt;
+    text-align: center;
   }
+
+  .btnestiliza::placeholder{
+      color: #c6c6c6;
+      text-align: start;
+      padding: 10px;
+  }
+
+
 
   .btnestilizat{
     width: 300px;
