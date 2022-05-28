@@ -1,7 +1,7 @@
-import styles from  './OutrosValores.module.css'
+import styles from  './SaqueFinal.module.css'
 
 
-const OutrosValores = () => {
+const SaqueFinal = () => {
     return (
 
         <main>
@@ -22,22 +22,23 @@ const OutrosValores = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizat}> Selecione o valor que deseja sacar:  </div>
+                    <div className={styles.btnestilizatt}>Saldo disponível:</div>
                 </div>
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizaS}></div>
+                    <div className={styles.btnestilizatt}>Valor do Saque:</div>
                 </div>
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizaS}></div>
+                    <div className={styles.btnestilizatt}>Saldo Final:</div>
                 </div>
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}>Saldo disponível: <br></br>R$ <span>1900,00 </span></div>
+                    <button className={styles.btnestiliza}>Voltar</button>
+                    
                 </div>
 
                 <div className={styles.container11}>
@@ -58,14 +59,16 @@ const OutrosValores = () => {
                     <div className={styles.btnestiliza1}></div>  
                 </div>
                 <div className={styles.container11}>
-                    <input type="text" className={styles.btnestiliza}placeholder="Digite aqui:"></input>
+                <div className={styles.btnestilizatt}>R$ <span>1900,00 </span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <div className={styles.btnestilizatt}><br></br></div>
+                    <div className={styles.btnestilizatt}>R$ <span>200,00 </span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
+                    <div className={styles.btnestilizatt}>R$ <span>1700,00 </span></div>
+                    <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza}>Sacar</button>
@@ -93,4 +96,4 @@ const OutrosValores = () => {
     )
 }
 
-export default OutrosValores
+export default SaqueFinal

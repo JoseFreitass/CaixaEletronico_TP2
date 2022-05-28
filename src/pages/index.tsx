@@ -31,7 +31,7 @@ const Home = () => {
 
               <div className={styles.container11}>
                 <button className={styles.btnestiliza1}></button>
-                <button className={styles.btnestiliza}>Consultar Saldo</button>
+                <button className={styles.btnestiliza}>Deposito</button>
               </div>
 
               <div className={styles.container11}>
