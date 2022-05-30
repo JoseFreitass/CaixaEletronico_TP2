@@ -1,7 +1,7 @@
-import styles from  './OutrosValores.module.css'
+import styles from  './deposito.module.css'
 
 
-const OutrosValores = () => {
+const deposito = () => {
     return (
 
         <main>
@@ -22,7 +22,7 @@ const OutrosValores = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizat}> Selecione o valor que deseja sacar:  </div>
+                    <div className={styles.btnestilizat}> Insira o Valor do Deposito:  </div>
                 </div>
 
                 <div className={styles.container11}>
@@ -32,12 +32,13 @@ const OutrosValores = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizaS}></div>
+                    <div className={styles.btnestilizatt}>Saldo Atual: <br></br>R$ <span>1900,00 </span></div>
                 </div>
+
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}>Saldo disponível: <br></br>R$ <span>1900,00 </span></div>
+                    <div className={styles.btnestilizatt}>Saldo pós Deposito: <br></br>R$ <span>2200,00 </span></div>
                 </div>
 
                 <div className={styles.container11}>
@@ -77,7 +78,7 @@ const OutrosValores = () => {
                 </div>
 
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>Sacar</button>
+                    <button className={styles.btnestiliza}>Depositar</button>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
@@ -102,4 +103,4 @@ const OutrosValores = () => {
     )
 }
 
-export default OutrosValores
+export default deposito

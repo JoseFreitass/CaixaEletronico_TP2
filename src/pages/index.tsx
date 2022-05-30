@@ -41,7 +41,7 @@ const Home = () => {
 
               <div className={styles.container11}>
                 <button className={styles.btnestiliza1}></button>
-                <button className={styles.btnestiliza}>Transferência</button>
+                <button className={styles.btnestilizacinza}>Transferência</button>
               </div>
 
               <div className={styles.container11}>
@@ -62,19 +62,19 @@ const Home = () => {
                 <div className={styles.btnestiliza1}></div>  
             </div>
             <div className={styles.container11}>
-                <button className={styles.btnestiliza}>Contratar Planos</button>
+                <button className={styles.btnestilizacinza}>Contratar Planos</button>
                 <button className={styles.btnestiliza1}></button>  
             </div>
             <div className={styles.container11}>
-                <button className={styles.btnestiliza}>Cheque Especial</button>
+                <button className={styles.btnestilizacinza}>Cheque Especial</button>
                 <button className={styles.btnestiliza1}></button>  
             </div>
             <div className={styles.container11}>
-                <button className={styles.btnestiliza}>Cancelamento de Cartão</button>
+                <button className={styles.btnestilizacinza}>Cancelamento de Cartão</button>
                 <button className={styles.btnestiliza1}></button>  
             </div>
             <div className={styles.container11}>
-                <button className={styles.btnestiliza}>Dúvidas</button>
+                <button className={styles.btnestilizacinza}>Dúvidas</button>
                 <button className={styles.btnestiliza1}></button>  
             </div>
             <div className={styles.container11}>

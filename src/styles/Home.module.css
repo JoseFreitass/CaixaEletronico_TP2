@@ -63,6 +63,18 @@
   font-size: 15pt;
 }
 
+.btnestilizacinza{
+    width: 300px;
+    height: 50px;
+    box-shadow: 10px 5px 5px black;
+    font-family:monospace;
+    font-size: 15pt;
+    background-color: rgb(169, 168, 168);
+}
+
+
+
+
 .titulo{
   width: 350px;
   height: 20px;
