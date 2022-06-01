@@ -6,13 +6,22 @@ import Context from '../../components/UserContext/index'
 
 const deposito = () => {
     const [user, setUser] = useContext<any>(Context)
-    const [current_currency, setCurrent_currency] = useState()
+    const [current_currency, setCurrent_currency] = useState('')
+    const [deposit, setDeposit] = useState('')
+    const [postDeposit, setPostDeposit] = useState('')
+    
+    useEffect(()=>{
+        setCurrent_currency(user.acounts[0].current_currency)
+    }, [])
 
     useEffect(()=>{
-        let userObj = JSON.parse(user)
-
-        setCurrent_currency(userObj.acounts[0].current_currency)
-    }, [])
+        if(deposit != ''){
+            let newValue = parseFloat(current_currency) + parseFloat(deposit)
+            setPostDeposit(newValue.toString())
+        }else{
+            setPostDeposit(current_currency)
+        }
+    }, [deposit, current_currency])
 
     return (
 
@@ -45,7 +54,7 @@ const deposito = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}>Saldo pós Deposito: <br></br>R$ <span>2200,00 </span></div>
+                    <div className={styles.btnestilizatt}>Saldo pós Deposito: <br></br>R$ <span>{postDeposit}</span></div>
                 </div>
 
                 <div className={styles.container11}>
@@ -73,7 +82,7 @@ const deposito = () => {
 
 
                 <div className={styles.container11}>
-                    <input type="text" className={styles.btnestiliza}placeholder="Digite aqui:"></input>
+                    <input type="text" className={styles.btnestiliza}placeholder="Digite aqui:" onChange={e => setDeposit(e.target.value)}></input>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
 

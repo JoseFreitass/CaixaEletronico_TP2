@@ -8,12 +8,15 @@ import Context from '../../components/UserContext/index'
 const Saque = () => {
     const [user, setUser] = useContext<any>(Context)
     const [current_currency, setCurrent_currency] = useState()
+    const [saque, setSaque] = useState('')
 
     useEffect(()=>{
-        let userObj = JSON.parse(user)
-
-        setCurrent_currency(userObj.acounts[0].current_currency)
+        setCurrent_currency(user.acounts[0].current_currency)
     }, [])
+
+    useEffect(()=>{
+        user.saque = saque
+    }, [saque])
 
     return (
 
@@ -71,16 +74,34 @@ const Saque = () => {
                     <div className={styles.btnestiliza1}></div>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza} onClick={()=>Router.push('saque/saquefinal')}>R$ 50,00</button>
-                    <button className={styles.btnestiliza1} onClick={()=>Router.push('saque/saquefinal')}></button>  
+                    <button className={styles.btnestiliza} onClick={()=>{
+                            setSaque('50')
+                            Router.push('saque/saquefinal')
+                        }}>R$ 50,00</button>
+                    <button className={styles.btnestiliza1} onClick={()=>{
+                            setSaque('50')
+                            Router.push('saque/saquefinal')
+                        }}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza} onClick={()=>Router.push('saque/saquefinal')}>R$ 100,00</button>
-                    <button className={styles.btnestiliza1} onClick={()=>Router.push('saque/saquefinal')}></button>  
+                    <button className={styles.btnestiliza} onClick={()=>{
+                            setSaque('100')
+                            Router.push('saque/saquefinal')
+                        }}>R$ 100,00</button>
+                    <button className={styles.btnestiliza1} onClick={()=>{
+                            setSaque('100')
+                            Router.push('saque/saquefinal')
+                        }}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza} onClick={()=>Router.push('saque/saquefinal')}>R$ 200,00</button>
-                    <button className={styles.btnestiliza1} onClick={()=>Router.push('saque/saquefinal')}></button>  
+                    <button className={styles.btnestiliza} onClick={()=>{
+                            setSaque('200')
+                            Router.push('saque/saquefinal')
+                        }}>R$ 200,00</button>
+                    <button className={styles.btnestiliza1} onClick={()=>{
+                            setSaque('200')
+                            Router.push('saque/saquefinal')
+                        }}></button>  
                 </div>
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza} onClick={()=>Router.push('saque/outrosvalores')}>Outros Valores</button>

@@ -25,7 +25,7 @@ const Home = () => {
 
     if (response?.status === 200) {
       let data = await response.text()
-      setUser(data)
+      setUser(JSON.parse(data))
     }else{
       return null
     }
