@@ -4,11 +4,32 @@ import Router from 'next/router'
 import Context from '../components/UserContext/index'
 
 const Home = () => {
-  const [user, setUser] = useContext(Context)
+  const [user, setUser] = useContext<any>(Context)
 
   useEffect(() =>{
-    // fetch('localhost:8080/cliente')
+    getUser()
   }, [])
+
+  const getUser = async () =>{
+    let headers = new Headers()
+
+    headers.append('Accept', 'application/json')
+    headers.append('Origin','http://localhost:3000')
+    headers.append('Access-Control-Allow-Origin', '*')
+
+    let response = await fetch('http://localhost:8080/client/1', {
+      method: 'GET',
+      headers: headers
+    })
+    .catch(err => console.log(err))
+
+    if (response?.status === 200) {
+      let data = await response.text()
+      setUser(data)
+    }else{
+      return null
+    }
+  }
 
   return (
       <main>

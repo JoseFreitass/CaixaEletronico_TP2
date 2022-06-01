@@ -1,7 +1,19 @@
 import styles from  './deposito.module.css'
+
+import React, { useContext, useEffect, useState } from 'react'
 import Router from 'next/router'
+import Context from '../../components/UserContext/index'
 
 const deposito = () => {
+    const [user, setUser] = useContext<any>(Context)
+    const [current_currency, setCurrent_currency] = useState()
+
+    useEffect(()=>{
+        let userObj = JSON.parse(user)
+
+        setCurrent_currency(userObj.acounts[0].current_currency)
+    }, [])
+
     return (
 
         <main>
@@ -27,7 +39,7 @@ const deposito = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}>Saldo Atual: <br></br>R$ <span>1900,00 </span></div>
+                    <div className={styles.btnestilizatt}>Saldo Atual: <br></br>R$ <span>{current_currency}</span></div>
                 </div>
 
 
