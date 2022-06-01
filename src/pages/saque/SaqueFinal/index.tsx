@@ -1,4 +1,5 @@
 import styles from  './SaqueFinal.module.css'
+import Router from 'next/router'
 
 
 const SaqueFinal = () => {
@@ -37,7 +38,7 @@ const SaqueFinal = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <button className={styles.btnestiliza}>Voltar</button>
+                    <button className={styles.btnestiliza} onClick={()=>Router.push('/saque')}>Voltar</button>
                     
                 </div>
 

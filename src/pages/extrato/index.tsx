@@ -1,5 +1,5 @@
 import styles from  './extrato.module.css'
-
+import Router from 'next/router'
 
 const extrato = () => {
     return (
@@ -26,7 +26,7 @@ const extrato = () => {
                 </div>
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}></div>
+                    <button className={styles.btnestiliza} onClick={()=>Router.push('/')}>Voltar</button>
                 </div>
                 <div className={styles.container11}>
                     <div className={styles.btnestiliza1}></div> 

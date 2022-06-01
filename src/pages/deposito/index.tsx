@@ -1,5 +1,5 @@
 import styles from  './deposito.module.css'
-
+import Router from 'next/router'
 
 const deposito = () => {
     return (
@@ -27,11 +27,6 @@ const deposito = () => {
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizaS}></div>
-                </div>
-
-                <div className={styles.container11}>
-                    <button className={styles.btnestiliza1}></button>
                     <div className={styles.btnestilizatt}>Saldo Atual: <br></br>R$ <span>1900,00 </span></div>
                 </div>
 
@@ -42,8 +37,13 @@ const deposito = () => {
                 </div>
 
                 <div className={styles.container11}>
+                    <button className={styles.btnestiliza1}></button>
+                    <button className={styles.btnestiliza} onClick={()=>Router.push('/')}>Voltar</button>
+                </div>
+
+                <div className={styles.container11}>
                     <div className={styles.btnestiliza1}></div> 
-                    <div className={styles.subtitulo}>Central de Ajuda</div>
+                    <div className={styles.btnestilizatt}>Central de Ajuda</div>
                 </div>
 
                 </div>
