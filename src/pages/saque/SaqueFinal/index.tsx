@@ -7,21 +7,25 @@ import Context from '../../../components/UserContext/index'
 const SaqueFinal = () => {
     const [user, setUser] = useContext<any>(Context)
     const [current_currency, setCurrent_currency] = useState('')
-    const [saque, setSaque] = useState('100')
     const [posSaque, setPosSaque] = useState('')
 
     useEffect(()=>{
-        setCurrent_currency(user.acounts[0].current_currency)
+        if(user.acounts){
+            setCurrent_currency(user.acounts[0].current_currency)
+        }
+        else{
+            Router.push('/')
+        }
     }, [])
 
     useEffect(()=>{
-        if(saque != ''){
-            let newValue = parseFloat(current_currency) - parseFloat(saque)
+        if(user.saque != ''){
+            let newValue = parseFloat(current_currency) - parseFloat(user.saque)
             setPosSaque(newValue.toString())
         }else{
             setPosSaque(current_currency)
         }
-    }, [saque, current_currency])
+    }, [current_currency])
 
     return (
 
@@ -84,7 +88,7 @@ const SaqueFinal = () => {
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <div className={styles.btnestilizatt}>R$ <span>{saque}</span></div>
+                    <div className={styles.btnestilizatt}>R$ <span>{user.saque}</span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
