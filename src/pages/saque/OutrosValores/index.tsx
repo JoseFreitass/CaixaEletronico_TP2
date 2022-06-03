@@ -1,7 +1,18 @@
 import styles from  './OutrosValores.module.css'
 
+import React, { useContext, useEffect, useState } from 'react'
+import Router from 'next/router'
+import Context from '../../../components/UserContext/index'
 
 const OutrosValores = () => {
+    const [user, setUser] = useContext<any>(Context)
+    const [current_currency, setCurrent_currency] = useState('')
+    const [saque, setSaque] = useState('')
+
+    useEffect(()=>{
+        setCurrent_currency(user.acounts[0].current_currency)
+    }, [])
+
     return (
 
         <main>
@@ -30,14 +41,18 @@ const OutrosValores = () => {
                     <div className={styles.btnestilizaS}></div>
                 </div>
 
+                
+
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizaS}></div>
+                    <div className={styles.btnestilizatt}>Saldo disponível: <br></br>R$ <span>{current_currency}</span></div>
                 </div>
 
                 <div className={styles.container11}>
                     <button className={styles.btnestiliza1}></button>
-                    <div className={styles.btnestilizatt}>Saldo disponível: <br></br>R$ <span>1900,00 </span></div>
+                    <button className={styles.btnestiliza} onClick={()=>{
+                            Router.push('/saque')
+                        }}>Voltar</button>
                 </div>
 
                 <div className={styles.container11}>
@@ -77,8 +92,8 @@ const OutrosValores = () => {
                 </div>
 
                 <div className={styles.container11}>
-                    <button className={styles.btnestiliza}>Sacar</button>
-                    <button className={styles.btnestiliza1}></button>  
+                    <button className={styles.btnestiliza} onClick={()=>Router.push('saquefinal')}>Sacar</button>
+                    <button className={styles.btnestiliza1} onClick={()=>Router.push('saquefinal')}></button>  
                 </div>
                 <div className={styles.container11}>
                     <div className={styles.subtitulo}>tel: 0800 - 9999999</div>
