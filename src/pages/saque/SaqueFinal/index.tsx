@@ -1,8 +1,28 @@
 import styles from  './SaqueFinal.module.css'
+import React, { useContext, useEffect, useState } from 'react'
 import Router from 'next/router'
+import Context from '../../../components/UserContext/index'
 
 
 const SaqueFinal = () => {
+    const [user, setUser] = useContext<any>(Context)
+    const [current_currency, setCurrent_currency] = useState('')
+    const [saque, setSaque] = useState('100')
+    const [posSaque, setPosSaque] = useState('')
+
+    useEffect(()=>{
+        setCurrent_currency(user.acounts[0].current_currency)
+    }, [])
+
+    useEffect(()=>{
+        if(saque != ''){
+            let newValue = parseFloat(current_currency) - parseFloat(saque)
+            setPosSaque(newValue.toString())
+        }else{
+            setPosSaque(current_currency)
+        }
+    }, [saque, current_currency])
+
     return (
 
         <main>
@@ -60,15 +80,15 @@ const SaqueFinal = () => {
                     <div className={styles.btnestiliza1}></div>  
                 </div>
                 <div className={styles.container11}>
-                <div className={styles.btnestilizatt}>R$ <span>1900,00 </span></div>
+                <div className={styles.btnestilizatt}>R$ <span>{current_currency}</span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <div className={styles.btnestilizatt}>R$ <span>200,00 </span></div>
+                    <div className={styles.btnestilizatt}>R$ <span>{saque}</span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>
-                    <div className={styles.btnestilizatt}>R$ <span>1700,00 </span></div>
+                    <div className={styles.btnestilizatt}>R$ <span>{posSaque}</span></div>
                     <button className={styles.btnestiliza1}></button>  
                 </div>
                 <div className={styles.container11}>

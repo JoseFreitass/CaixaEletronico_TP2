@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+ import React, { useContext, useEffect } from 'react'
 import styles from  '../styles/Home.module.css'
 import Router from 'next/router'
 import Context from '../components/UserContext/index'
