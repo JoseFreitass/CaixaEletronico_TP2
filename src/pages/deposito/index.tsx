@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Router from 'next/router'
 import Context from '../../components/UserContext/index'
 
-const deposito = () => {
+const Deposito = () => {
     const [user, setUser] = useContext<any>(Context)
     const [current_currency, setCurrent_currency] = useState('')
     const [deposit, setDeposit] = useState('')
@@ -124,4 +124,4 @@ const deposito = () => {
     )
 }
 
-export default deposito
+export default Deposito
