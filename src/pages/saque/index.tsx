@@ -11,12 +11,17 @@ const Saque = () => {
     const [saque, setSaque] = useState('')
 
     useEffect(()=>{
-        setCurrent_currency(user.acounts[0].current_currency)
+        if(user.acounts)
+            setCurrent_currency(user.acounts[0].current_currency)
+        else{
+            Router.push('/')
+        }
     }, [])
 
     useEffect(()=>{
         user.saque = saque
     }, [saque])
+
 
     return (
 
